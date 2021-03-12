@@ -12,10 +12,24 @@
 </head>
 
 <body>
-    <button class="btn-primary">Get New Joke</button>
-    <ul>
-
-    </ul>
+    <div class="container">
+        <h1>How it works</h1>
+        <p>Each time you click the button, a new GET request is sent to the icanhazdadjoke API. The API response is
+            parsed
+            by
+            axios (built on top of JavaScript's fetch functionality), then the joke text is appended to the unordered
+            list on the page.
+            The GET request is made using the new async await
+            functionality, which is syntactic sugar (i.e., an abstraction) built on top of JavaScript's promise
+            functionality. The async function's body is wrapped in a try catch block to handle cases where the promise
+            is
+            resolved as well as when it is rejected (e.g., in case of an error on the server side). The error is printed
+            to
+            the console. </p>
+        <button class="btn-primary">Get New Joke</button>
+        <ul>
+        </ul>
+    </div>
 
     <script src="app.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
